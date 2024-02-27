@@ -1,4 +1,4 @@
-import { Express, Request, Response, Application } from "express";
+import { Request, Response, Application } from "express";
 import express = require("express");
 import dotenv = require("dotenv");
 import cors = require("cors");
@@ -41,3 +41,5 @@ mongoose
     });
   })
   .catch((err) => console.log("DB connection error =>", err));
+
+export default app;
