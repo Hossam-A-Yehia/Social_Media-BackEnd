@@ -22,8 +22,8 @@ app.use(
   })
 );
 
-app.get("/", (res: Response) => {
-  res.status(200).json({
+app.get("/", (req: Request, res: Response) => {
+  res.json({
     message: "Hello Sir",
   });
 });
@@ -43,5 +43,3 @@ mongoose
     });
   })
   .catch((err) => console.log("DB connection error =>", err));
-
-export default app;
