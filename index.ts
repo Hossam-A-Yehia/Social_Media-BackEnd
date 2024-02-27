@@ -22,8 +22,10 @@ app.use(
   })
 );
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to Express & TypeScript Server");
+app.get("/", (res: Response) => {
+  res.status(200).json({
+    message: "Hello Sir",
+  });
 });
 readdirSync("./routes").map((r) =>
   app.use("/api/auth", require(`./routes/${r}`))
