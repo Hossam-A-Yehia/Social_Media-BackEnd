@@ -43,5 +43,4 @@ mongoose
     });
   })
   .catch((err) => console.log("DB connection error =>", err));
-
 export default app;
