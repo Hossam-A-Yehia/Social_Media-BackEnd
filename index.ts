@@ -18,7 +18,7 @@ app.use(express.json({ limit: "5mb" })); // it will help to recive the data from
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["*"],
   })
 );
 
@@ -43,4 +43,5 @@ mongoose
     });
   })
   .catch((err) => console.log("DB connection error =>", err));
+
 export default app;
