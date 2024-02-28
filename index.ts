@@ -35,7 +35,7 @@ readdirSync("./routes").map((r) =>
 );
 
 mongoose
-  .connect(process.env.MONGO_SECRET)
+  .connect(process.env.MONGO_SECRET as string)
   .then(() => {
     console.log("database connected");
     app.listen(port, () => {
@@ -43,3 +43,4 @@ mongoose
     });
   })
   .catch((err) => console.log("DB connection error =>", err));
+export default app;
