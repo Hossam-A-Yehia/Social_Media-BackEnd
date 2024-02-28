@@ -22,7 +22,7 @@ app.use(
   })
 );
 
-app.get("/", (req: Request, res: Response) => {
+app.use("/", (req: Request, res: Response) => {
   res.json({
     message: "Hello Sir",
   });
